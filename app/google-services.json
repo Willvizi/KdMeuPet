@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "111124468085",
+    "project_id": "kdmeupetapp-cb439",
+    "storage_bucket": "kdmeupetapp-cb439.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111124468085:android:a9e09d7a7aad871940c33c",
+        "android_client_info": {
+          "package_name": "com.williavizi.kdmeupetaplicacao"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111124468085-trfutbr8atga6n5jfgq2k73q86n3aj3v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.williavizi.kdmeupetaplicacao",
+            "certificate_hash": "4aac1bec91f76cc275c77acaff70e93620d7303c"
+          }
+        },
+        {
+          "client_id": "111124468085-i4fjbb4s598spca739k6kkkph207rdda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp58rDKVcUbDeFi9GdZGseA21_3RXH4t0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111124468085-i4fjbb4s598spca739k6kkkph207rdda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
