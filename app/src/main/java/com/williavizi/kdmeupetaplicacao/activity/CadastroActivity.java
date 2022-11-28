@@ -22,6 +22,7 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.williavizi.kdmeupetaplicacao.helper.ConfiguracaoFirebase;
+import com.williavizi.kdmeupetaplicacao.helper.UsuarioFirebase;
 import com.williavizi.kdmeupetaplicacao.model.Usuario;
 
 public class CadastroActivity extends AppCompatActivity {
@@ -103,13 +104,30 @@ public class CadastroActivity extends AppCompatActivity {
 
                         if( task.isSuccessful() ){
 
-                            progressBar.setVisibility(View.GONE);
-                            Toast.makeText(CadastroActivity.this,
-                                    "Cadastro com sucesso",
-                                    Toast.LENGTH_SHORT).show();
 
-                            startActivity( new Intent(getApplicationContext(), MainActivity.class));
-                            finish();
+
+                            try {
+                                progressBar.setVisibility(View.GONE);
+
+                                //salvar dados firebase
+
+                                String idUsuario = task.getResult().getUser().getUid();
+                                usuario.setId( idUsuario );
+                                usuario.salvar();
+
+                                //salvar dados do profile
+                                UsuarioFirebase.atualizarNomeUsuario(usuario.getNome());
+
+                                Toast.makeText(CadastroActivity.this,
+                                        "Cadastro com sucesso",
+                                        Toast.LENGTH_SHORT).show();
+
+                                startActivity( new Intent(getApplicationContext(), MainActivity.class));
+                                finish();
+                            }catch (Exception e){
+                                e.printStackTrace();
+                            }
+
 
                         }else {
 

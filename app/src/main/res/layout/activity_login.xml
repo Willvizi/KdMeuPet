@@ -11,7 +11,7 @@
         android:id="@+id/imageView"
         android:layout_width="283dp"
         android:layout_height="321dp"
-        app:layout_constraintBottom_toTopOf="@+id/editLoginEmail"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -19,10 +19,9 @@
 
     <EditText
         android:id="@+id/editLoginEmail"
-        android:layout_width="0dp"
+        android:layout_width="363dp"
         android:layout_height="44dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/backgroud_caixa_texto"
         android:ems="10"
         android:hint="E-mail"
@@ -30,17 +29,15 @@
         android:padding="10dp"
         android:textColor="#F8F7F7"
         android:textColorHint="#F8F7F7"
-        app:layout_constraintBottom_toTopOf="@+id/editLoginSenha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
         android:id="@+id/editLoginSenha"
-        android:layout_width="0dp"
+        android:layout_width="363dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/backgroud_caixa_texto"
         android:ems="10"
         android:hint="Senha"
@@ -48,22 +45,19 @@
         android:padding="10dp"
         android:textColor="#DBDBDB"
         android:textColorHint="#F8F7F7"
-        app:layout_constraintBottom_toTopOf="@+id/buttonEntrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editLoginEmail" />
 
     <Button
         android:id="@+id/buttonEntrar"
-        android:layout_width="0dp"
+        android:layout_width="363dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:background="@drawable/backgroud_botao"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
         android:text="ENTRAR"
         android:textColor="@android:color/white"
         android:textColorHint="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/textCadastrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editLoginSenha" />
@@ -72,11 +66,11 @@
         android:id="@+id/textCadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:onClick="abrirCadastro"
         android:text="Cadastre-se"
         android:textColor="@android:color/white"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/progressLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonEntrar" />
@@ -86,9 +80,34 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textCadastrar" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="277dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="KDMEUPET "
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Willian Visicati"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
